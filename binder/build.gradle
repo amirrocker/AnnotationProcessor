@@ -1,17 +1,19 @@
-apply plugin: 'com.android.application'
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
-    //buildToolsVersion "29.0.3"
+//    buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "de.amirrocker.annotationprocessor"
-        minSdkVersion 24
-        targetSdkVersion 30
+//        minSdkVersion 27
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'proguard-rules.pro'
+        minSdkVersion 24
     }
 
     buildTypes {
@@ -25,14 +27,10 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation project(':binder')
-    annotationProcessor project(':compiler')
-
-    implementation("br.com.devsrsouza.eventkt:eventkt-core:0.2.0-SNAPSHOT")
+    api project(':library')
 
 }
