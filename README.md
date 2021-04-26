@@ -1,14 +1,14 @@
 ## Annotation Processor
 
 Overview:
-A simple Annotation Processor for binding views like with Butterknife.
-The code is from a tutorial I found on medium. Anyway it sounded very interesting
-and I decided to try it out. And here we are. At the moment the bindView annotation
-works correctly. I have not yet found the time to find out whether or not the other
-annotations really work.
-WIP - work in progress repo
+A simple Annotation Processor.
 
-Descrioption:
+Description:
+ Code generation is very useful tool to optimize development pipelines allowing for quicker turnaround 
+ times for new features. A certain amount of code is always boilerplate and its usually equal or even
+ greater than the actual domain code. So it does make sense to think about how to cut down on useless
+ noise that not only takes time but reduces readability and maintainability.
+
  Test project based on a medium based tutorial on how to roll your own annotation processor.
  See: https://medium.com/@aitorvs/annotation-processing-in-android-studio-7042ccb83024
  Since I can't get the first setup to work I'll keep researching to find a working solution.
